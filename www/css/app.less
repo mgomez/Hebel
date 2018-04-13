@@ -1,0 +1,151 @@
+/**
+ *
+ * HEBEL WEB @zkar13
+ *
+ */
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile: ~"only screen and (max-width: 529px)";
+@tablet: ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop: ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl: ~"only screen and (min-width: 1129px)";
+@naranja: #ff5113;
+
+@font-face {
+	font-family: 'bebas_neueregular';
+	src: url('../fonts/bebasneue_2-webfont.woff2') format('woff2'),
+	url('../fonts/bebasneue_2-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'din_mediumregular';
+	src: url('../fonts/din_medium-webfont.woff2') format('woff2'),
+	url('../fonts/din_medium-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: bebas_neueregular, Cursiva;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+//MENU
+.menu-container {
+	background: #fff;
+	display: flex;
+	position: relative;
+	padding: 25px;
+	align-items: center;
+	& .menu {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		& .menu-item {
+			margin-right: 20px;
+			& a {
+				font-size: 22px;
+				text-decoration: none;
+				color: #000;
+				font-family: bebas_neueregular, Helvetica;
+				letter-spacing: 3px;
+				transition: all .1s ease;
+				&:hover,
+				&.active {
+					border-bottom: 2px solid @naranja;
+					color: @naranja;
+				}
+			}
+		}
+	}
+	& #lang {
+		& a {
+			font-size: 20px;
+			color: #000;
+			margin-right: 8px;
+			&.active {
+				background: @naranja;
+				border-radius: 50%;
+				color: #fff;
+				height: 24px;
+				line-height: 24px;
+				padding: 3px;
+				width: 24px;
+			}
+		}
+	}
+	& #social {
+		position: absolute;
+		right: 3vw;
+		top: 3vh;
+		& img {
+			display: inline-block;
+			width: 24px;
+			margin-right: 8px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/**
+ *
+ * INICIO
+ *
+ */
+
+.Heroe {
+	position: relative;
+	padding: 15px;
+	& .Heroe-1 {
+		background: @naranja;
+		color: #fff;
+		height: 290px;
+		padding: 15px;
+		& .Heroe-1-text {
+			font-size: 64px;
+		}
+		& .Heroe-aside {
+			float: right;
+			& span,
+			& img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			& span {
+				line-height: 1;
+				font-size: 18px;
+				text-align: right;
+			}
+		}
+	}
+	& .Heroe-2 {
+		background: @naranja;
+		color: #fff;
+	}
+}
