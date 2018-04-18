@@ -38,6 +38,14 @@
 	box-sizing: border-box;
 }
 
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
 body {
 	background: #fff;
 	color: #000;
@@ -49,6 +57,13 @@ a:hover {
 	text-decoration: none;
 }
 
+#page {
+	padding: 55px;
+	@media @mobile {
+		padding: 0;
+	}
+}
+
 //MENU
 .menu-container {
 	background: #fff;
@@ -56,11 +71,17 @@ a:hover {
 	position: relative;
 	padding: 25px;
 	align-items: center;
+	@media @mobile {
+		flex-direction: column;
+	}
 	& .menu {
 		display: flex;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		@media @mobile {
+			flex-direction: column;
+		}
 		& .menu-item {
 			margin-right: 20px;
 			& a {
@@ -113,6 +134,22 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * INICIO
@@ -127,11 +164,17 @@ a:hover {
 		color: #fff;
 		height: 290px;
 		padding: 15px;
+		position: relative;
 		& .Heroe-1-text {
 			font-size: 64px;
+			@media @mobile {
+				font-size: 40px;
+			}
 		}
 		& .Heroe-aside {
-			float: right;
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
 			& span,
 			& img {
 				display: inline-block;
@@ -139,8 +182,10 @@ a:hover {
 			}
 			& span {
 				line-height: 1;
-				font-size: 18px;
+				font-size: 24px;
 				text-align: right;
+				font-family: din_mediumregular;
+				margin-right: 8px;
 			}
 		}
 	}
@@ -148,4 +193,721 @@ a:hover {
 		background: @naranja;
 		color: #fff;
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Page Container
+ *
+ */
+
+.PageContainer {
+	position: relative;
+	background: #ccc url(../img/bgSection.png) repeat center fixed;
+	margin-top: 20px;
+	padding-bottom: 65px;
+	& .PageContainer-content {
+		background: #fff;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * 360
+ *
+ */
+
+.section360 {
+	background: #b7b7b7;
+	text-align: center;
+	padding: 45px 0 20px 0;
+	color: #6f6f6f;
+	font-family: din_mediumregular;
+	text-transform: uppercase;
+	& h4 {
+		color: #6a6a6a;
+		font-size: 28px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Beneficios
+ *
+ */
+
+.Beneficios {
+	position: relative;
+	& .Beneficios-title {
+		color: #6a6a6a;
+		font-size: 48px;
+		text-align: center;
+	}
+	& .Beneficios-subtitle {
+		text-align: center;
+		color: #000;
+		font-size: 30px;
+	}
+	& .Beneficios-container {
+		margin: 50px 0 30px 0;
+		position: relative;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		@media @mobile {
+			flex-direction: column;
+		}
+		& .Beneficios-beneficio {
+			& img {
+				display: inline-block;
+				height: 100px;
+			}
+			& span {
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Quienes Somos
+ *
+ */
+
+.QuienesSomos {
+	position: relative;
+	display: flex;
+	@media @mobile {
+		flex-direction: column;
+		& .QuienesSomos-left,
+		& .QuienesSomos-right {
+			width: 100% !important;
+		}
+	}
+	& .QuienesSomos-left {
+		width: 50%;
+		background: #000 url(../img/HEBEL POWER PANEL 1.png) no-repeat center center;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:before {
+			content: "";
+			background: rgba(0, 0, 0, .7);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: -1;
+		}
+		& ul {
+			list-style: none;
+			& li {
+				background: url('../img/point.png') no-repeat left center;
+				color: #fff;
+				font-size: 30px;
+				font-family: din_mediumregular;
+				margin: 0 0 15px 0;
+				padding-left: 44px;
+			}
+		}
+	}
+	& .QuienesSomos-right {
+		background: #202020;
+		width: 59%;
+		text-align: center;
+		padding: 65px 35px;
+		&>h2 {
+			border-right: 5px solid #f15623;
+			color: #fff;
+			display: inline-block;
+			font-family: din_mediumregular;
+			font-size: 38px;
+			letter-spacing: 5px;
+			margin-bottom: 40px;
+			padding-right: 8px;
+		}
+		& p {
+			color: #999999;
+			font-family: din_mediumregular;
+			font-size: 22px;
+			line-height: 1.3em;
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Productos
+ *
+ */
+
+.Productos {
+	position: relative;
+	font-family: din_mediumregular;
+	& .Productos-title {
+		color: #6a6a6a;
+		font-size: 28px;
+		text-align: center;
+		padding: 25px 0 50px 0;
+	}
+	& .Producto-row {
+		position: relative;
+		display: flex;
+		@media @mobile {
+			flex-direction: column;
+		}
+		&:nth-child(odd) {
+			& .Producto-text {
+				&:before {
+					border-top: 30px solid transparent;
+					border-right: 30px solid #f15623;
+					border-bottom: 30px solid transparent;
+					border-left: 30px solid transparent;
+					right: 100%;
+					left: auto;
+				}
+			}
+		}
+		& .Producto-text,
+		& .Producto-img {
+			flex-basis: 25%;
+			@media @mobile {
+				flex-basis: 100%;
+				height: 300px;
+			}
+		}
+		& .Producto-text {
+			align-items: center;
+			background: #f15623;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			padding: 35px 12px 25px 12px;
+			position: relative;
+			transition: all .2s ease-in;
+			&:hover {
+				background: #fff;
+				color: #f15623;
+				& a {
+					color: #f15623;
+					border-color: #f15623;
+				}
+			}
+			&:before {
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				z-index: 9;
+				border-top: 30px solid transparent;
+				border-right: 30px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid #f15623;
+				@media @mobile {
+					display: none;
+				}
+			}
+			& .Producto-text-title {
+				margin-bottom: 14px;
+				position: relative;
+				display: block;
+				&:before {
+					content: "";
+					position: absolute;
+					top: 100%;
+					width: 20px;
+					background: #fff;
+					height: 2px;
+					left: 0;
+				}
+			}
+			& .Producto-text-content {
+				display: block;
+				margin-bottom: 18px;
+				line-height: 2em;
+				font-weight: 400;
+			}
+			& a {
+				background: transparent;
+				font-size: 14px;
+				border-radius: 15px;
+				border: 2px solid #fff;
+				padding: 6px;
+				color: #fff;
+				transition: all .2s ease;
+				&:hover {
+					background: #f15623;
+					color: #fff;
+				}
+			}
+		}
+		& .Producto-img {
+			background: #333;
+			background-size: cover;
+			&.img-1 {
+				background-image: url(../img/HEBEL SISTEMA MAP REF INTERIORMENTE 4.png);
+			}
+			&.img-2 {
+				background-image: url(../img/HEBEL PRACTIMURO 1.png);
+			}
+			&.img-3 {
+				background-image: url(../img/HEBEL POWER PANEL 1.png);
+			}
+			&.img-4 {
+				background-image: url(../img/HEBEL PANEL PARA MURO 4.png);
+			}
+			&.img-5 {
+				background-image: url(../img/HEBEL PANEL PARA LOSA 3.png);
+			}
+			&.img-6 {
+				background-image: url(../img/HEBEL PLACATERMOAISLANTE 3.png);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Contacto
+ *
+ */
+
+.Contacto {
+	position: relative;
+	background: #eee;
+	& .Contacto-hgroup {
+		text-align: center;
+		padding: 35px 0;
+	}
+	& .Contacto-title {
+		color: #939395;
+		font-size: 32px;
+		letter-spacing: 5px;
+		font-family: din_mediumregular;
+		text-transform: uppercase;
+	}
+	& .Contacto-subtitle {
+		color: #999999;
+		font-family: din_mediumregular;
+		& a {
+			color: #f15623;
+		}
+	}
+	& .Contacto-boxContainer {
+		display: flex;
+		padding: 10px 65px;
+		@media @mobile {
+			flex-direction: column;
+			padding: 15px;
+		}
+		& .Contacto-box {
+			background: #fff;
+			color: #999999;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+			margin: 5px;
+			padding: 65px;
+			@media @mobile {
+				padding: 20px;
+				flex-basis: 100% !important;
+			}
+			&:nth-child(1) {
+				flex-basis: 40%;
+			}
+			&:nth-child(2) {
+				flex-grow: 1;
+			}
+			& label {
+				color: #f15623;
+				font-size: 20px;
+				letter-spacing: 1px;
+				display: block;
+			}
+			& p {
+				font-family: din_mediumregular;
+			}
+			& .form-input {
+				background: transparent;
+				border: 0;
+				border-bottom: 2px solid #eee;
+				display: inline-block;
+				width: 100%;
+				font-family: din_mediumregular;
+				&:focus {
+					outline: none;
+				}
+			}
+			& button {
+				background: #f15623;
+				text-align: center;
+				color: #fff;
+				padding: 8px 40px;
+				border: 0;
+				border-radius: 2px;
+				letter-spacing: 2px;
+				box-shadow: 0px 3px 5px #ccc;
+			}
+		}
+	}
+}
+
+::placeholder {
+	color: #999999;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #999999;
+}
+
+::-ms-input-placeholder {
+	color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * Certificaciones
+ *
+ */
+
+.Certificaciones {
+	position: relative;
+	padding-bottom: 25px;
+	text-align: center;
+	& .Certificaciones-title {
+		color: #6a6a6a;
+		font-size: 30px;
+		text-align: center;
+		padding: 30px 0;
+		font-family: din_mediumregular;
+		text-transform: uppercase;
+	}
+	& .Certificaciones-cerContainer {
+		display: flex;
+		justify-content: space-evenly;
+		@media @mobile {
+			flex-direction: column;
+		}
+		& .Certificaciones-cer {
+			display: inline-block;
+		}
+	}
+}
+
+footer {
+	background: #202020;
+	padding: 30px;
+	text-align: right;
+	font-size: 12px;
+	color: #fff;
+	margin-top: 60px;
+	font-family: din_mediumregular;
+}
+
+.scrollTop {
+	position: fixed;
+	right: 2%;
+	bottom: 10px;
+	background: #f15623 url(../img/up-chevron.svg) no-repeat center center;
+	background-size: 50%;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	border-radius: 50%;
+	s opacity: 0;
+	transition: all 0.4s ease-in-out 0s;
 }
