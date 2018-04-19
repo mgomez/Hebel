@@ -11,7 +11,9 @@ $("#page").html(page);
 
 
 $(function() {
-	AOS.init();
+	AOS.init({
+		disable: 'mobile'
+	});
 
 	FastClick.attach(document.body);
 

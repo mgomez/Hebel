@@ -88,8 +88,8 @@ a:hover {
 				font-size: 22px;
 				text-decoration: none;
 				color: #000;
-				font-family: bebas_neueregular, Helvetica;
-				letter-spacing: 3px;
+				font-family: din_mediumregular, Helvetica;
+				letter-spacing: -1px;
 				transition: all .1s ease;
 				&:hover,
 				&.active {
@@ -126,6 +126,20 @@ a:hover {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,11 +203,28 @@ a:hover {
 			}
 		}
 	}
-	& .Heroe-2 {
-		background: @naranja;
-		color: #fff;
+	& .Heroe-2,
+	& .Heroe-3 {
+		text-align: center;
+		@media @mobile {
+			margin: 10px 0;
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +281,7 @@ a:hover {
 
 .PageContainer {
 	position: relative;
-	background: #ccc url(../img/bgSection.png) repeat center fixed;
+	background: #ccc url(../img/bgSection.png) repeat center center;
 	margin-top: 20px;
 	padding-bottom: 65px;
 	& .PageContainer-content {
@@ -259,6 +290,20 @@ a:hover {
 		margin: 0 auto;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -323,6 +368,20 @@ a:hover {
 		font-size: 28px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -454,6 +513,20 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * Quienes Somos
@@ -471,14 +544,15 @@ a:hover {
 		}
 	}
 	& .QuienesSomos-left {
-		width: 50%;
-		background: #000 url(../img/HEBEL POWER PANEL 1.png) no-repeat center center;
+		align-items: center;
 		background-size: cover;
-		position: relative;
-		z-index: 1;
+		background: #000 url(../img/HEBEL POWER PANEL 1.png) no-repeat center center;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		padding: 25px;
+		position: relative;
+		width: 50%;
+		z-index: 1;
 		&:before {
 			content: "";
 			background: rgba(0, 0, 0, .7);
@@ -525,6 +599,20 @@ a:hover {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -621,6 +709,9 @@ a:hover {
 					color: #f15623;
 					border-color: #f15623;
 				}
+				&+.Producto-img {
+					animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				}
 			}
 			&:before {
 				content: "";
@@ -675,6 +766,9 @@ a:hover {
 		& .Producto-img {
 			background: #333;
 			background-size: cover;
+			&:hover {
+				animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			}
 			&.img-1 {
 				background-image: url(../img/HEBEL SISTEMA MAP REF INTERIORMENTE 4.png);
 			}
@@ -696,6 +790,27 @@ a:hover {
 		}
 	}
 }
+
+
+
+@keyframes shadow-inset-center {
+	0% {
+		box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+		box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,6 +886,12 @@ a:hover {
 			box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
 			margin: 5px;
 			padding: 65px;
+			& a {
+				color: #999999;
+				&:hover {
+					color: #777;
+				}
+			}
 			@media @mobile {
 				padding: 20px;
 				flex-basis: 100% !important;
@@ -858,6 +979,20 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * Certificaciones
@@ -884,6 +1019,9 @@ a:hover {
 		}
 		& .Certificaciones-cer {
 			display: inline-block;
+			@media @mobile {
+				margin-bottom: 45px;
+			}
 		}
 	}
 }
