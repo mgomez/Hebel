@@ -504,19 +504,19 @@ a:hover {
   background-image: url(../img/HEBEL SISTEMA MAP REF INTERIORMENTE 4.png);
 }
 .Productos .Producto-row .Producto-img.img-2 {
-  background-image: url(../img/productPanel.png);
+  background-image: url(../img/HEBEL PRACTIMURO 1.png);
 }
 .Productos .Producto-row .Producto-img.img-3 {
-  background-image: url(../img/productoPowerFloor.png);
+  background-image: url(../img/HEBEL POWER PANEL 1.png);
 }
 .Productos .Producto-row .Producto-img.img-4 {
-  background-image: url(../img/productVerticalLoad.png);
+  background-image: url(../img/HEBEL PANEL PARA MURO 4.png);
 }
 .Productos .Producto-row .Producto-img.img-5 {
-  background-image: url(../img/productWallpanel.png);
+  background-image: url(../img/HEBEL PANEL PARA LOSA 3.png);
 }
 .Productos .Producto-row .Producto-img.img-6 {
-  background-image: url(../img/productFence.png);
+  background-image: url(../img/HEBEL PLACATERMOAISLANTE 3.png);
 }
 @-webkit-keyframes shadow-inset-center {
   0% {
@@ -626,6 +626,7 @@ a:hover {
   display: inline-block;
   width: 100%;
   font-family: din_mediumregular;
+  color: #999b99;
 }
 .Contacto .Contacto-boxContainer .Contacto-box .form-input:focus {
   outline: none;
