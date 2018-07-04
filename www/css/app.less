@@ -130,6 +130,104 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * INICIO
@@ -182,6 +280,10 @@ a:hover {
 
 
 
+
+
+
+
 /**
  *
  * Page Container
@@ -190,7 +292,7 @@ a:hover {
 
 .PageContainer {
     position: relative;
-    background: #ccc url(../img/bgSection.png) repeat center center;
+    background: #fff;
     margin-top: 20px;
     padding-bottom: 65px;
     & .PageContainer-content {
@@ -199,6 +301,10 @@ a:hover {
         margin: 0 auto;
     }
 }
+
+
+
+
 
 
 
@@ -225,6 +331,128 @@ a:hover {
 
 
 
+
+
+
+/**
+ *
+ * orangeBox
+ *
+ */
+
+.orangeBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media @mobile {
+        flex-direction: column;
+        & .orangeBox-item {
+            flex-basis: 100%;
+            margin: 0 10px;
+        }
+    }
+    &-item {
+        flex-basis: 18%;
+        background: #ff5114;
+        color: #fff;
+        font-size: 24px;
+        line-height: 1;
+        margin-right: 10px;
+        padding: 15px 5px;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * Beneficios
@@ -233,17 +461,18 @@ a:hover {
 
 .Beneficios {
     position: relative;
-    & .Beneficios-title {
+    &-title {
         color: #6a6a6a;
         font-size: 48px;
         text-align: center;
     }
-    & .Beneficios-subtitle {
+    &-subtitle {
+        background: #626262;
         text-align: center;
-        color: #000;
-        font-size: 30px;
+        color: #fff;
+        font-size: 48px;
     }
-    & .Beneficios-container {
+    &-container {
         margin: 50px 0 30px 0;
         position: relative;
         display: flex;
@@ -269,6 +498,104 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * Quienes Somos
@@ -286,25 +613,12 @@ a:hover {
         }
     }
     & .QuienesSomos-left {
-        align-items: center;
-        background-size: cover;
-        background: #000 url(../img/HEBEL POWER PANEL 1.png) no-repeat center center;
-        display: flex;
-        justify-content: center;
-        padding: 25px;
+        background: #fff;
+        padding: 15px;
         position: relative;
+        text-align: center;
         width: 50%;
         z-index: 1;
-        &:before {
-            content: "";
-            background: rgba(0, 0, 0, .7);
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-            z-index: -1;
-        }
         & ul {
             list-style: none;
             & li {
@@ -341,6 +655,104 @@ a:hover {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -499,6 +911,10 @@ a:hover {
 
 
 
+
+
+
+
 /**
  *
  * Contacto
@@ -508,25 +924,23 @@ a:hover {
 .Contacto {
     position: relative;
     background: #eee;
-    & .Contacto-hgroup {
+    &-hgroup {
         text-align: center;
         padding: 35px 0;
     }
-    & .Contacto-title {
-        color: #939395;
-        font-size: 32px;
-        letter-spacing: 5px;
-        font-family: din_mediumregular;
-        text-transform: uppercase;
+    &-title {
+        color: #ff5114;
+        font-size: 28px;
+        letter-spacing: 4px;
     }
-    & .Contacto-subtitle {
+    &-subtitle {
         color: #999999;
         font-family: din_mediumregular;
         & a {
             color: #f15623;
         }
     }
-    & .Contacto-boxContainer {
+    &-boxContainer {
         display: flex;
         padding: 10px 65px;
         @media @mobile {
@@ -539,12 +953,7 @@ a:hover {
             box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
             margin: 5px;
             padding: 65px;
-            & a {
-                color: #999999;
-                &:hover {
-                    color: #777;
-                }
-            }
+            position: relative;
             @media @mobile {
                 padding: 20px;
                 flex-basis: 100% !important;
@@ -586,6 +995,53 @@ a:hover {
                 letter-spacing: 2px;
                 box-shadow: 0px 3px 5px #ccc;
             }
+            &-floatButton {
+                background: #f25623;
+                bottom: 10px;
+                color: #fff;
+                cursor: pointer;
+                font-size: 28px;
+                letter-spacing: 1px;
+                line-height: 1em;
+                padding: 6px;
+                position: absolute;
+                right: 10px;
+                width: 180px;
+                transition: all -2s linear;
+                @media @mobile {
+                    margin: 35px 0;
+                    position: static;
+                    display: block;
+                    padding: 15px;
+                    & img {
+                        float: none !important;
+                        margin: 5px 0;
+                    }
+                }
+                &:hover {
+                    background: #ff4001;
+                }
+                & img {
+                    width: 42px;
+                    float: right;
+                }
+            }
+        }
+    }
+    &-item {
+        display: inline-block;
+        &-content:nth-child(1) {
+            width: 60px;
+            margin-right: 15px;
+        }
+        &-content {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1.4em;
+            margin-bottom: 25px;
+            & h4 {
+                color: #f25623;
+            }
         }
     }
 }
@@ -602,6 +1058,241 @@ a:hover {
 ::-ms-input-placeholder {
     color: #999999;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * PANEL MURO
+ *
+ */
+
+.panelMuro {
+    position: relative;
+    display: flex;
+    &-img {
+        flex: 1;
+        background: #ccc url(../img/panel.jpg);
+        background-size: cover;
+        transition: all .2s ease;
+        &:hover {
+            background-size: cover;
+        }
+    }
+    &-info {
+        flex: 1;
+        background: #f25623;
+        color: #fff;
+        padding: 35px;
+        &-title {
+            font-size: 32px;
+            font-family: din_mediumregular;
+        }
+        &-text {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+        & button {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.proyectosTitle {
+    text-align: center;
+    color: #f25623;
+    font-size: 28px;
+    letter-spacing: 4px;
+    padding: 15px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide-image {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.swiper-caption {
+    background: #f25623;
+    color: #fff;
+    position: absolute;
+    padding: 15px 180px 15px 15px;
+    font-size: 22px;
+    top: 20px;
+    left: 5px;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.swiper-slide-content {
+    height: 50vh;
+    & img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 15%;
+        margin-right: 15px;
+    }
+}
+
+
+.productosTitle {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 25px 0;
+}
+
+.productos {
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &-item {
+        flex: 1 0 30%;
+        background: #f05625;
+        text-align: center;
+        font-size: 20px;
+        padding: 8px;
+        color: #fff;
+        margin: 0 10px 10px 0;
+        font-family: din_mediumregular;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -625,12 +1316,13 @@ a:hover {
     }
     & .Certificaciones-cerContainer {
         display: flex;
-        justify-content: space-evenly;
-        @media @mobile {
-            flex-direction: column;
-        }
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
         & .Certificaciones-cer {
+            flex-basis: 33%;
             display: inline-block;
+            margin-bottom: 45px;
             @media @mobile {
                 margin-bottom: 45px;
             }

@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'aos/dist/aos.css';
+import 'swiper/dist/css/swiper.css';
 import "./css/app.less";
 import page from "./views/page.html";
 import AOS from 'aos';
 import FastClick from "fastclick";
+import Swiper from 'swiper';
 import 'jquery-validation';
 import $ from "jquery";
 
@@ -16,6 +18,13 @@ $(function() {
     });
 
     FastClick.attach(document.body);
+
+    var mySwiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
     //scroll
     $('a[href*=\\#]').on('click', function(event) {
