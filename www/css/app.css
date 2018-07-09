@@ -311,11 +311,6 @@ a:hover {
 .Beneficios-container .Beneficios-beneficio span {
   display: block;
 }
-/**
- *
- * Quienes Somos
- *
- */
 .QuienesSomos {
   position: relative;
   display: -webkit-box;
@@ -337,12 +332,34 @@ a:hover {
   }
 }
 .QuienesSomos .QuienesSomos-left {
-  background: #fff;
-  padding: 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background: #000 url(../img/HEBEL POWER PANEL 1.png) no-repeat center center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px;
   position: relative;
-  text-align: center;
   width: 50%;
   z-index: 1;
+}
+.QuienesSomos .QuienesSomos-left:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
 .QuienesSomos .QuienesSomos-left ul {
   list-style: none;
@@ -708,6 +725,14 @@ a:hover {
 .Contacto-item-content h4 {
   color: #f25623;
 }
+.Contacto-item-content a {
+  color: #999999;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.Contacto-item-content a:hover {
+  color: #f25623;
+}
 ::-webkit-input-placeholder {
   color: #999999;
   opacity: 1;
@@ -763,6 +788,7 @@ a:hover {
   background: #f25623;
   color: #fff;
   padding: 35px;
+  font-family: din_mediumregular;
 }
 .panelMuro-info-title {
   font-size: 32px;
@@ -772,12 +798,19 @@ a:hover {
   font-size: 20px;
   margin-bottom: 35px;
 }
-.panelMuro-info button {
+.panelMuro-button {
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  padding: 8px;
+  padding: 0px 10px;
+  font-size: 18px;
   border-radius: 10px;
+  letter-spacing: -1px;
+  font-family: din_mediumregular;
+}
+.panelMuro-button:hover {
+  background: #fff;
+  color: #f25623;
 }
 .proyectosTitle {
   text-align: center;
@@ -793,7 +826,7 @@ a:hover {
 .swiper-slide-image {
   background-position: center;
   background-size: cover;
-  height: 60vh;
+  height: 490px;
 }
 .swiper-caption {
   background: #f25623;
@@ -809,12 +842,46 @@ a:hover {
 }
 .swiper-slide-content {
   height: 50vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px;
+}
+.swiper-slide-content .swiper-logos {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .swiper-slide-content img {
   display: inline-block;
   vertical-align: middle;
-  max-width: 15%;
+  width: 180px;
   margin-right: 15px;
+  padding: 20px;
 }
 .productosTitle {
   text-align: center;
@@ -847,6 +914,14 @@ a:hover {
   color: #fff;
   margin: 0 10px 10px 0;
   font-family: din_mediumregular;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  border: 2px solid #f05625;
+}
+.productos-item:hover {
+  color: #f05625;
+  background: #fff;
+  border: 2px solid #f05625;
 }
 /**
  *
@@ -871,24 +946,22 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+@media only screen and (max-width: 529px) {
+  .Certificaciones .Certificaciones-cerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .Certificaciones .Certificaciones-cerContainer .Certificaciones-cer {
-  -webkit-flex-basis: 33%;
-      -ms-flex-preferred-size: 33%;
-          flex-basis: 33%;
   display: inline-block;
-  margin-bottom: 45px;
 }
 @media only screen and (max-width: 529px) {
   .Certificaciones .Certificaciones-cerContainer .Certificaciones-cer {
