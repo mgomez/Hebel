@@ -5,9 +5,9 @@
  */
 
 @highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
-~"only screen and (min--moz-device-pixel-ratio: 1.5)",
-~"only screen and (-o-min-device-pixel-ratio: 3/2)",
-~"only screen and (min-device-pixel-ratio: 1.5)";
+    ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+    ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+    ~"only screen and (min-device-pixel-ratio: 1.5)";
 @mobile: ~"only screen and (max-width: 529px)";
 @tablet: ~"only screen and (min-width: 530px) and (max-width: 949px)";
 @desktop: ~"only screen and (min-width: 950px) and (max-width: 1128px)";
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'bebas_neueregular';
     src: url('../fonts/bebasneue_2-webfont.woff2') format('woff2'),
-    url('../fonts/bebasneue_2-webfont.woff') format('woff');
+        url('../fonts/bebasneue_2-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'din_mediumregular';
     src: url('../fonts/din_medium-webfont.woff2') format('woff2'),
-    url('../fonts/din_medium-webfont.woff') format('woff');
+        url('../fonts/din_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -59,6 +59,7 @@ a:hover {
 
 #page {
     padding: 55px;
+
     @media @mobile {
         padding: 0;
     }
@@ -71,19 +72,24 @@ a:hover {
     position: relative;
     padding: 25px;
     align-items: center;
+
     @media @mobile {
         flex-direction: column;
     }
+
     & .menu {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
+
         @media @mobile {
             flex-direction: column;
         }
+
         & .menu-item {
             margin-right: 20px;
+
             & a {
                 font-size: 22px;
                 text-decoration: none;
@@ -91,6 +97,7 @@ a:hover {
                 font-family: din_mediumregular, Helvetica;
                 letter-spacing: -1px;
                 transition: all .1s ease;
+
                 &:hover,
                 &.active {
                     border-bottom: 2px solid @naranja;
@@ -99,11 +106,13 @@ a:hover {
             }
         }
     }
+
     & #lang {
         & a {
             font-size: 20px;
             color: #000;
             margin-right: 8px;
+
             &.active {
                 background: @naranja;
                 border-radius: 50%;
@@ -115,13 +124,14 @@ a:hover {
             }
         }
     }
+
     & #social {
         position: absolute;
         right: 3vw;
         top: 3vh;
+
         & img {
             display: inline-block;
-            width: 24px;
             margin-right: 8px;
         }
     }
@@ -138,28 +148,34 @@ a:hover {
 .Heroe {
     position: relative;
     padding: 15px;
+
     & .Heroe-1 {
         background: @naranja;
         color: #fff;
         height: 290px;
         padding: 15px;
         position: relative;
+
         & .Heroe-1-text {
             font-size: 61px;
             line-height: 1;
+
             @media @mobile {
                 font-size: 40px;
             }
         }
+
         & .Heroe-aside {
             position: absolute;
             bottom: 10px;
             right: 10px;
+
             & span,
             & img {
                 display: inline-block;
                 vertical-align: middle;
             }
+
             & span {
                 line-height: 1;
                 font-size: 24px;
@@ -169,9 +185,11 @@ a:hover {
             }
         }
     }
+
     & .Heroe-2,
     & .Heroe-3 {
         text-align: center;
+
         @media @mobile {
             margin: 10px 0;
         }
@@ -191,6 +209,7 @@ a:hover {
     background: #ccc url(../img/bgSection.png) repeat center center;
     margin-top: 20px;
     padding-bottom: 65px;
+
     & .PageContainer-content {
         background: #fff;
         max-width: 960px;
@@ -213,6 +232,7 @@ a:hover {
     color: #6f6f6f;
     font-family: din_mediumregular;
     text-transform: uppercase;
+
     & h4 {
         color: #6a6a6a;
         font-size: 28px;
@@ -229,32 +249,39 @@ a:hover {
 
 .Beneficios {
     position: relative;
+
     & .Beneficios-title {
         color: #6a6a6a;
         font-size: 48px;
         text-align: center;
     }
+
     & .Beneficios-subtitle {
         text-align: center;
         color: #000;
         font-size: 30px;
     }
+
     & .Beneficios-container {
         margin: 50px 0 30px 0;
         position: relative;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
         @media @mobile {
             flex-direction: column;
         }
+
         & .Beneficios-beneficio {
             text-align: center;
             font-family: din_mediumregular, Helvetica;
+
             & img {
                 display: inline-block;
                 height: 100px;
             }
+
             & span {
                 display: block;
             }
@@ -273,13 +300,16 @@ a:hover {
 .QuienesSomos {
     position: relative;
     display: flex;
+
     @media @mobile {
         flex-direction: column;
+
         & .QuienesSomos-left,
         & .QuienesSomos-right {
             width: 100% !important;
         }
     }
+
     & .QuienesSomos-left {
         align-items: center;
         background-size: cover;
@@ -290,6 +320,7 @@ a:hover {
         position: relative;
         width: 50%;
         z-index: 1;
+
         &:before {
             content: "";
             background: rgba(0, 0, 0, .7);
@@ -300,8 +331,10 @@ a:hover {
             position: absolute;
             z-index: -1;
         }
+
         & ul {
             list-style: none;
+
             & li {
                 background: url('../img/point.png') no-repeat left center;
                 color: #fff;
@@ -312,11 +345,13 @@ a:hover {
             }
         }
     }
+
     & .QuienesSomos-right {
-        background: #202020;
+        background: #ff5113;
         width: 59%;
         text-align: center;
         padding: 65px 35px;
+
         &>h2 {
             border-right: 5px solid #f15623;
             color: #fff;
@@ -327,8 +362,9 @@ a:hover {
             margin-bottom: 40px;
             padding-right: 8px;
         }
+
         & p {
-            color: #999999;
+            color: #fff;
             font-family: din_mediumregular;
             font-size: 22px;
             line-height: 1.3em;
@@ -348,18 +384,22 @@ a:hover {
 .Productos {
     position: relative;
     font-family: din_mediumregular;
+
     & .Productos-title {
         color: #6a6a6a;
         font-size: 28px;
         text-align: center;
         padding: 25px 0 50px 0;
     }
+
     & .Producto-row {
         position: relative;
         display: flex;
+
         @media @mobile {
             flex-direction: column;
         }
+
         &:nth-child(odd) {
             & .Producto-text {
                 &:before {
@@ -372,14 +412,17 @@ a:hover {
                 }
             }
         }
+
         & .Producto-text,
         & .Producto-img {
             flex-basis: 25%;
+
             @media @mobile {
                 flex-basis: 100%;
                 height: 300px;
             }
         }
+
         & .Producto-text {
             align-items: center;
             background: #f15623;
@@ -389,17 +432,21 @@ a:hover {
             padding: 35px 12px 25px 12px;
             position: relative;
             transition: all .2s ease-in;
+
             &:hover {
                 background: #fff;
                 color: #f15623;
+
                 & a {
                     color: #f15623;
                     border-color: #f15623;
                 }
+
                 &+.Producto-img {
                     animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 }
             }
+
             &:before {
                 content: "";
                 width: 0;
@@ -412,14 +459,17 @@ a:hover {
                 border-right: 30px solid transparent;
                 border-bottom: 30px solid transparent;
                 border-left: 30px solid #f15623;
+
                 @media @mobile {
                     display: none;
                 }
             }
+
             & .Producto-text-title {
                 margin-bottom: 14px;
                 position: relative;
                 display: block;
+
                 &:before {
                     content: "";
                     position: absolute;
@@ -430,12 +480,14 @@ a:hover {
                     left: 0;
                 }
             }
+
             & .Producto-text-content {
                 display: block;
                 margin-bottom: 18px;
                 line-height: 2em;
                 font-weight: 400;
             }
+
             & a {
                 background: transparent;
                 font-size: 14px;
@@ -444,33 +496,42 @@ a:hover {
                 padding: 6px;
                 color: #fff;
                 transition: all .2s ease;
+
                 &:hover {
                     background: #f15623;
                     color: #fff;
                 }
             }
         }
+
         & .Producto-img {
             background: #333;
             background-size: cover;
+
             &:hover {
                 animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             }
+
             &.img-1 {
                 background-image: url(../img/HEBEL SISTEMA MAP REF INTERIORMENTE 4.png);
             }
+
             &.img-2 {
                 background-image: url(../img/HEBEL PRACTIMURO 1.png);
             }
+
             &.img-3 {
                 background-image: url(../img/HEBEL POWER PANEL 1.png);
             }
+
             &.img-4 {
                 background-image: url(../img/HEBEL PANEL PARA MURO 4.png);
             }
+
             &.img-5 {
                 background-image: url(../img/HEBEL PANEL PARA LOSA 3.png);
             }
+
             &.img-6 {
                 background-image: url(../img/HEBEL PLACATERMOAISLANTE 3.png);
             }
@@ -484,6 +545,7 @@ a:hover {
     0% {
         box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
     }
+
     100% {
         box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
     }
@@ -501,10 +563,12 @@ a:hover {
 .Contacto {
     position: relative;
     background: #eee;
+
     & .Contacto-hgroup {
         text-align: center;
         padding: 35px 0;
     }
+
     & .Contacto-title {
         color: #939395;
         font-size: 32px;
@@ -512,51 +576,64 @@ a:hover {
         font-family: din_mediumregular;
         text-transform: uppercase;
     }
+
     & .Contacto-subtitle {
         color: #999999;
         font-family: din_mediumregular;
+
         & a {
             color: #f15623;
         }
     }
+
     & .Contacto-boxContainer {
         display: flex;
         padding: 10px 65px;
+
         @media @mobile {
             flex-direction: column;
             padding: 15px;
         }
+
         & .Contacto-box {
             background: #fff;
             color: #999999;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
             margin: 5px;
             padding: 65px;
+
             & a {
                 color: #999999;
+
                 &:hover {
                     color: #777;
                 }
             }
+
             @media @mobile {
                 padding: 20px;
                 flex-basis: 100% !important;
             }
+
             &:nth-child(1) {
                 flex-basis: 40%;
             }
+
             &:nth-child(2) {
                 flex-grow: 1;
             }
+
             & label {
                 color: #f15623;
                 font-size: 20px;
                 letter-spacing: 1px;
                 display: block;
             }
+
             & p {
                 font-family: din_mediumregular;
             }
+
             & .form-input {
                 background: transparent;
                 border: 0;
@@ -565,10 +642,12 @@ a:hover {
                 width: 100%;
                 font-family: din_mediumregular;
                 color: #999b99;
+
                 &:focus {
                     outline: none;
                 }
             }
+
             & button {
                 background: #f15623;
                 text-align: center;
@@ -607,6 +686,7 @@ a:hover {
     position: relative;
     padding-bottom: 25px;
     text-align: center;
+
     & .Certificaciones-title {
         color: #6a6a6a;
         font-size: 30px;
@@ -615,14 +695,18 @@ a:hover {
         font-family: din_mediumregular;
         text-transform: uppercase;
     }
+
     & .Certificaciones-cerContainer {
         display: flex;
         justify-content: space-evenly;
+
         @media @mobile {
             flex-direction: column;
         }
+
         & .Certificaciones-cer {
             display: inline-block;
+
             @media @mobile {
                 margin-bottom: 45px;
             }
