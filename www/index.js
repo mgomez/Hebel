@@ -46,6 +46,10 @@ $(function() {
 
     });
 
+    $("#QuienesSomos .QuienesSomos-right").on("click", function() {
+        window.location = "https://www.hebel.mx/es/content/quienes_somos_1456.php";
+    });
+
     $("#frm-contacto").on("submit", function() {
         var $frm = $(this);
         if ($frm.valid()) {
