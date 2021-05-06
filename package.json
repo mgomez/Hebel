@@ -54,7 +54,7 @@
         "aos": "^2.2.0",
         "bootstrap": "^4.0.0",
         "fastclick": "^1.0.6",
-        "handlebars": "^4.0.11",
+        "handlebars": "^4.7.7",
         "jquery": "^3.3.1",
         "jquery-validation": "^1.17.0"
     }
